@@ -1,11 +1,10 @@
-// Function to extract and list matching patterns
-function extractPatterns() {
+function extractPatterns(letter = "F", type = "FYF") {
+  // Dynamically build the regex pattern
+  const pattern = new RegExp(`${letter}\\/\\d+\\/${type}\\/2024`, "g");
+
   // Select all elements with class names containing 'label14'
   const elements = document.querySelectorAll('[class*="label14"]');
-  
-  // Regex pattern to match "F/XXX/FYF/2024"
-  const pattern = /F\/\d+\/FYF\/2024/g;
-  
+
   // Array to store matches
   const matches = [];
 
@@ -22,5 +21,6 @@ function extractPatterns() {
   console.log("Matches:", matches);
 }
 
-// Call the function to execute
-extractPatterns();
+// Call the function with your desired letter and type
+extractPatterns("F", "FYF"); // Default: F and FYF
+extractPatterns("G", "GRD"); // Example: G and GRD
