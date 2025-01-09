@@ -3,8 +3,7 @@ function extractPatterns(letter = "F", type = "FYF") {
   const pattern = new RegExp(`${letter}\\/\\d+\\/${type}\\/2024`, "g");
 
   // Select all elements with class names containing 'label14'
-  const elements = document.querySelectorAll('[class*="label14"]');
-
+  const elements = document.querySelectorAll('[id$="_test"]')
   // Array to store matches
   const matches = [];
 
